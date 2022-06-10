@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 5.3//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!--HBM is a short name for Hibernate Mapping.
+It is an xml file in which we define the mapping between
+pojo class to database table and pojo class variables to table columns.-->
+<class name="org.example.pojo" table="anki_table">
+    <id name="Id" type="integer"/>
+<!--The sequence is a shortcut name for SequenceGenerator class.
+It reads next value of a database sequence and then returns that value as id to the hibernate.
+To use this sequence generator in hibernate configuration file -->
+    <property name="name" column="Name" type="string" not-null="true"></property>
+    <property name="salary" column="salary" type="float" not-null="true"></property>
+    <property name="company" column="company" type="string" not-null="true"></property>
+
+
+
+</class>
+</hibernate-mapping>
